@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Basics';
+  name = "Dinh";
+  imgURL = "https://picsum.photos/id/237/500/500";
+  
+  getName(){
+    return this.name;
+  }
+
+  changeImg(e: KeyboardEvent) {
+    this.imgURL = (e.target as HTMLInputElement).value
+  }
 }
